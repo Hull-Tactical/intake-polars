@@ -1,0 +1,11 @@
+[project]
+name = 'intake_polars'
+version='0.1.2'
+description = 'Intake driver to read parquet and csv files using polars'
+dependencies = ['polars','intake','intake-parquet==0.2.3','fsspec','cloudpathlib[s3]','pyarrow','pandas','s3fs']
+requires-python = ">=3.10.0"
+authors = [{name="Alex Kment",email='alex@hulltactical.com'}]
+
+[project.entry-points."intake.drivers"]
+polars_csv='intake_polars:PolarsCSV'
+polars_parquet='intake_polars:PolarsParquet'
